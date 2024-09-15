@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { FiHelpCircle } from 'react-icons/fi';
-import Spline from '@splinetool/react-spline';
+import SplineViewer from '@/Spline';
 
 export default function Home() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="app-container">
-        <Spline scene="https://prod.spline.design/ARety-X9YSGW5npQ/scene.splinecode" />
+        <SplineViewer />
 
         <div className="nav-icon" onClick={toggleOverlay}>
           <FiHelpCircle size={50} color="white" />
