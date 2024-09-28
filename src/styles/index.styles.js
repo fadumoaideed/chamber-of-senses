@@ -8,6 +8,9 @@ export const Container = styled.div`
 `;
 
 export const StyledIcon = styled.div`
+  svg {
+    color: white;
+  }
   position: absolute;
   top: 50px;
   right: 50px;
@@ -15,4 +18,12 @@ export const StyledIcon = styled.div`
   z-index: 110;
   /* onhoverr */
   /* background-color: transparent; */
+  @media (max-width: 800px) {
+    top: 80px;
+    right: 80px;
+
+    svg {
+      color: ${(props) => (props.isOverlayOpen ? 'black' : 'white')};
+    }
+  }
 `;

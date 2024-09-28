@@ -26,8 +26,8 @@ export default function Home() {
       <Container>
         <SplineViewer />
 
-        <StyledIcon onClick={toggleOverlay}>
-          <FiHelpCircle size={50} color="white" />
+        <StyledIcon isOverlayOpen={isOverlayOpen} onClick={toggleOverlay}>
+          <FiHelpCircle size={50} />
         </StyledIcon>
 
         {isOverlayOpen && <Overlay />}

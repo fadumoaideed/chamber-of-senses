@@ -22,6 +22,13 @@ export const StyledOverlay = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
 
+  @media (max-width: 800px) {
+    position: fixed;
+    padding: 100px;
+    /* height: 100%;
+    width: 100%; */
+  }
+
   h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
