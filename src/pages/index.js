@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FiHelpCircle } from 'react-icons/fi';
 import SplineViewer from '@/Spline';
 import { Overlay } from '@/components/Overlay';
-import { Container, StyledIcon } from '@/styles/index.styles';
+import { Container, StyledIconDesktop } from '@/styles/index.styles';
 
 export default function Home() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -26,11 +26,19 @@ export default function Home() {
       <Container>
         <SplineViewer />
 
-        <StyledIcon isOverlayOpen={isOverlayOpen} onClick={toggleOverlay}>
-          <FiHelpCircle size={50} />
-        </StyledIcon>
+        <StyledIconDesktop
+          isOverlayOpen={isOverlayOpen}
+          onClick={toggleOverlay}
+        >
+          <FiHelpCircle color={'white'} size={50} />
+        </StyledIconDesktop>
 
-        {isOverlayOpen && <Overlay />}
+        {isOverlayOpen && (
+          <Overlay
+            isOverlayOpen={isOverlayOpen}
+            setIsOverlayOpen={setIsOverlayOpen}
+          />
+        )}
       </Container>
     </>
   );

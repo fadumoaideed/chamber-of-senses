@@ -22,31 +22,34 @@ export const StyledOverlay = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
 
+  @media (max-width: 480px) {
+    padding: none;
+    h2 {
+      padding-top: 0;
+      padding-left: 0;
+    }
+  }
+
   @media (max-width: 600px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 800px) {
     position: relative;
-    width: 390px;
+    height: 100%;
+    width: auto;
 
     h2 {
       padding-top: 30px;
       padding-left: 20px;
       padding-right: 20px;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     p {
       font-size: 1rem;
       padding-left: 20px;
       padding-right: 20px;
-    }
-  }
-
-  @media (max-width: 800px) {
-    min-width: 390px;
-
-    h2,
-    p {
-      padding-left: 10px;
-      padding-right: 10px;
     }
   }
 
@@ -70,7 +73,7 @@ export const StyledOverlay = styled.div`
     padding-top: 10px;
   }
 
-  p:nth-child(4) {
+  p:nth-child(5) {
     padding-top: 30px;
   }
 

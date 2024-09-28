@@ -1,10 +1,19 @@
 import React from 'react';
 import { OverlayBackground, StyledOverlay } from './Overlay.styles';
+import { StyledIcon, StyledIconMobile } from '@/styles/index.styles';
+import { RxCross1 } from 'react-icons/rx';
 
-export function Overlay() {
+export function Overlay({ isOverlayOpen, setIsOverlayOpen }) {
+  const toggleOverlay = () => {
+    setIsOverlayOpen(!isOverlayOpen);
+  };
+
   return (
     <OverlayBackground>
       <StyledOverlay>
+        <StyledIconMobile isOverlayOpen={isOverlayOpen} onClick={toggleOverlay}>
+          <RxCross1 size={50} color={'black'} />
+        </StyledIconMobile>
         <h2>Chamber of Senses</h2>
 
         <p>

@@ -7,21 +7,21 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const StyledIcon = styled.div`
-  svg {
-    color: white;
-  }
+export const StyledIconDesktop = styled.div`
   position: absolute;
   top: 50px;
   right: 50px;
   z-index: 110;
 
-  @media (max-width: 800px) {
-    top: 80px;
-    right: 80px;
+  display: ${(props) => (props.isOverlayOpen ? 'none' : 'block')};
+`;
 
-    svg {
-      color: ${(props) => (props.isOverlayOpen ? 'black' : 'white')};
-    }
+export const StyledIconMobile = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  z-index: 110;
+
+  @media (max-width: 800px) {
   }
 `;
