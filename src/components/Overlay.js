@@ -24,9 +24,10 @@ export function Overlay() {
           >
             free@last
           </a>{' '}
-          in Nechells, the exhibition aims to inspire underprivileged youth to
-          explore exciting career opportunities in STEAM (Science, Technology,
-          Engineering, Arts, and Mathematics).
+          in Nechells between 1<sup>st</sup> - 3<sup>rd</sup> Oct 2024, the
+          exhibition aims to inspire underprivileged youth to explore exciting
+          career opportunities in STEAM (Science, Technology, Engineering, Arts,
+          and Mathematics).
         </p>
 
         <p> Created in collaboration with:</p>
