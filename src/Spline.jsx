@@ -1,12 +1,20 @@
 import Spline from '@splinetool/react-spline';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const SplineViewer = () => {
   const splineRef = useRef(null);
+  const [showFallback, setShowFallback] = useState(false);
+  const fallbackVideoUrl = '/fallback.mp4'; // Add your fallback video URL here
 
   useEffect(() => {
     let animationFrameId;
     let lastFrameTime = 0;
+    let timeoutId;
+
+    // Set timeout to switch to fallback after 3 seconds
+    timeoutId = setTimeout(() => {
+      setShowFallback(true);
+    }, 3000);
 
     const isMobile = window.innerWidth <= 768;
     const fps = isMobile ? 30 : 60;
@@ -18,7 +26,9 @@ const SplineViewer = () => {
         lastFrameTime = timestamp;
         // Perform updates here if needed
         if (splineRef.current) {
-          // Access spline-viewer or handle any updates
+          // If Spline is loaded, clear the timeout for the fallback
+          clearTimeout(timeoutId);
+          setShowFallback(false); // Ensure the fallback isn't shown if Spline loads
         }
       }
 
@@ -30,14 +40,30 @@ const SplineViewer = () => {
     animationFrameId = requestAnimationFrame(renderLoop);
 
     // Clean up when the component unmounts
-    return () => cancelAnimationFrame(animationFrameId);
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      clearTimeout(timeoutId);
+    };
   }, []);
+
+  if (showFallback) {
+    return (
+      <video
+        src={fallbackVideoUrl}
+        autoPlay
+        loop
+        muted
+        style={{ width: '100%', height: '100%' }}
+      />
+    );
+  }
 
   return (
     <Spline
       ref={splineRef}
       scene="https://prod.spline.design/G7QUnfiL4vqbdOMQ/scene.splinecode"
-    ></Spline>
+    />
   );
 };
+
 export default SplineViewer;
