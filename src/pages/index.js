@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FiHelpCircle } from 'react-icons/fi';
 import SplineViewer from '@/Spline';
 import { Overlay } from '@/components/Overlay';
+import { Container, StyledIcon } from '@/styles/index.styles';
 
 export default function Home() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -21,20 +22,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="app-container">
+
+      <Container>
         <SplineViewer />
 
-        <div className="nav-icon" onClick={toggleOverlay}>
+        <StyledIcon onClick={toggleOverlay}>
           <FiHelpCircle size={50} color="white" />
-        </div>
+        </StyledIcon>
 
-        {isOverlayOpen && (
-          <>
-            <Overlay />
-            <div className="blur-background" onClick={toggleOverlay}></div>
-          </>
-        )}
-      </div>
+        {isOverlayOpen && <Overlay />}
+      </Container>
     </>
   );
 }
