@@ -22,9 +22,32 @@ export const StyledOverlay = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
 
+  @media (max-width: 600px) {
+    position: relative;
+    width: 390px;
+
+    h2 {
+      padding-top: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
   @media (max-width: 800px) {
-    position: fixed;
-    padding: 100px;
+    min-width: 390px;
+
+    h2,
+    p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   h2 {
