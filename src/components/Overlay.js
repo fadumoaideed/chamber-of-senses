@@ -1,16 +1,10 @@
 import React from 'react';
 import { OverlayBackground, StyledOverlay } from './Overlay.styles';
-import { FiHelpCircle } from 'react-icons/fi';
-import { StyledIcon } from '@/styles/index.styles';
 
 export function Overlay() {
   return (
     <OverlayBackground>
       <StyledOverlay>
-        {/* <StyledIcon toggleOverlay={toggleOverlay} onClick={toggleOverlay}>
-          <FiHelpCircle size={50} />
-        </StyledIcon> */}
-
         <h2>Chamber of Senses</h2>
 
         <p>

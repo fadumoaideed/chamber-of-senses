@@ -25,8 +25,6 @@ export const StyledOverlay = styled.div`
   @media (max-width: 800px) {
     position: fixed;
     padding: 100px;
-    /* height: 100%;
-    width: 100%; */
   }
 
   h2 {
