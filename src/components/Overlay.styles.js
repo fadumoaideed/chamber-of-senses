@@ -19,6 +19,7 @@ export const StyledOverlay = styled.div`
   z-index: 100; /* Overlay is still above the blur background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Roboto', sans-serif;
+  overflow-y: auto;
 
   h2 {
     font-weight: 500;
