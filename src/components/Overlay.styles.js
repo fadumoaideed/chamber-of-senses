@@ -37,6 +37,10 @@ export const StyledOverlay = styled.div`
     padding-bottom: 25px;
   }
 
+  p:nth-child(6) {
+    padding-bottom: 75px;
+  }
+
   @media (min-width: 600px) {
     padding: 30px;
 
