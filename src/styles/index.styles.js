@@ -31,7 +31,7 @@ export const StyledIconMobile = styled.div`
   }
 
   @media (min-width: 800px) {
-    padding-bottom: 0px;
+    padding: 0px;
     svg {
       height: 40px;
       width: 40px;

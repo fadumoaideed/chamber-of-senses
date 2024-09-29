@@ -22,9 +22,19 @@ export const StyledOverlay = styled.div`
   overflow-y: auto;
 
   h2 {
+    font-family: 'Rubik', sans-serif;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.9rem;
     text-transform: uppercase;
+    /* background: -webkit-linear-gradient(
+      0deg,
+      #6a0dad,
+      #2f2be2,
+      #e22bde,
+      #6a0dad
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
   }
 
   p {
@@ -39,6 +49,11 @@ export const StyledOverlay = styled.div`
 
   p:nth-child(6) {
     padding-bottom: 75px;
+  }
+
+  a {
+    color: #2b83e2;
+    text-decoration: none;
   }
 
   @media (min-width: 600px) {
@@ -66,14 +81,12 @@ export const StyledOverlay = styled.div`
     padding: 50px;
 
     h2 {
-      font-family: 'Roboto', sans-serif;
       font-weight: 500;
       font-size: 2.5rem;
       text-transform: uppercase;
     }
 
     p {
-      font-family: 'Roboto', sans-serif;
       font-weight: 300;
       line-height: 23px;
       font-size: 1.3rem;
@@ -82,10 +95,8 @@ export const StyledOverlay = styled.div`
     p:nth-child(5) {
       padding-top: 30px;
     }
-
-    a {
-      color: #5e60ce;
-      text-decoration: none;
+    p:nth-child(6) {
+      padding-bottom: 0px;
     }
   }
 `;
