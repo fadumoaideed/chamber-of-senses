@@ -1,4 +1,3 @@
-import Spline from '@splinetool/react-spline';
 import { useEffect, useRef, useState } from 'react';
 
 const SplineViewer = () => {
@@ -10,6 +9,13 @@ const SplineViewer = () => {
     let animationFrameId;
     let lastFrameTime = 0;
     let timeoutId;
+
+    // Dynamically load the Spline viewer script
+    const script = document.createElement('script');
+    script.src =
+      'https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js';
+    script.type = 'module';
+    document.body.appendChild(script);
 
     // Set timeout to switch to fallback after 3 seconds
     timeoutId = setTimeout(() => {
@@ -43,6 +49,7 @@ const SplineViewer = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
       clearTimeout(timeoutId);
+      document.body.removeChild(script); // Remove the script when the component unmounts
     };
   }, []);
 
@@ -59,9 +66,10 @@ const SplineViewer = () => {
   }
 
   return (
-    <Spline
+    <spline-viewer
       ref={splineRef}
-      scene="https://prod.spline.design/ELXnSsvv74uR80gZ/scene.splinecode"
+      url="https://prod.spline.design/ELXnSsvv74uR80gZ/scene.splinecode"
+      style={{ width: '100%', height: '100%' }}
     />
   );
 };
