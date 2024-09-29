@@ -61,7 +61,7 @@ const SplineViewer = () => {
   return (
     <Spline
       ref={splineRef}
-      scene="https://prod.spline.design/G7QUnfiL4vqbdOMQ/scene.splinecode"
+      scene="https://prod.spline.design/ELXnSsvv74uR80gZ/scene.splinecode"
     />
   );
 };
