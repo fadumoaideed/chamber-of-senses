@@ -12,7 +12,7 @@ export function Overlay({ isOverlayOpen, setIsOverlayOpen }) {
     <OverlayBackground>
       <StyledOverlay>
         <StyledIconMobile isOverlayOpen={isOverlayOpen} onClick={toggleOverlay}>
-          <RxCross1 size={50} color={'black'} />
+          <RxCross1 size={30} color={'black'} />
         </StyledIconMobile>
         <h2>Chamber of Senses</h2>
 

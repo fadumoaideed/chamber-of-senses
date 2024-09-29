@@ -22,6 +22,19 @@ export const StyledIconMobile = styled.div`
   padding: 10px;
   z-index: 110;
 
-  @media (max-width: 800px) {
+  @media (min-width: 600px) {
+    padding: 20px;
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  @media (min-width: 800px) {
+    padding-bottom: 0px;
+    svg {
+      height: 40px;
+      width: 40px;
+    }
   }
 `;
