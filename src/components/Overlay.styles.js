@@ -82,14 +82,14 @@ export const StyledOverlay = styled.div`
 
     h2 {
       font-weight: 500;
-      font-size: 2.5rem;
+      font-size: 1.9rem;
       text-transform: uppercase;
     }
 
     p {
       font-weight: 300;
       line-height: 23px;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
 
     p:nth-child(5) {
