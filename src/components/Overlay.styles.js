@@ -51,6 +51,7 @@ export const StyledOverlay = styled.div`
   p:last-child {
     color: #203030;
     font-size: 0.8rem;
+    padding-bottom: 15px;
   }
 
   @media (min-width: 600px) {
