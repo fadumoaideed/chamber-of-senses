@@ -62,6 +62,7 @@ export function Overlay({ isOverlayOpen, setIsOverlayOpen }) {
             West Midlands Innovation Programme
           </a>
         </p>
+        <br></br>
       </StyledOverlay>
     </OverlayBackground>
   );
