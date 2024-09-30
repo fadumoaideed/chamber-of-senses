@@ -43,17 +43,14 @@ export const StyledOverlay = styled.div`
     font-size: 1.3rem;
   }
 
-  p:nth-child(4) {
-    padding-bottom: 25px;
-  }
-
-  p:nth-child(6) {
-    padding-bottom: 75px;
-  }
-
   a {
     color: #2b83e2;
     text-decoration: none;
+  }
+
+  p:last-child {
+    color: #203030;
+    font-size: 0.8rem;
   }
 
   @media (min-width: 600px) {
@@ -90,13 +87,6 @@ export const StyledOverlay = styled.div`
       font-weight: 300;
       line-height: 23px;
       font-size: 1.1rem;
-    }
-
-    p:nth-child(5) {
-      padding-top: 30px;
-    }
-    p:nth-child(6) {
-      padding-bottom: 0px;
     }
   }
 `;

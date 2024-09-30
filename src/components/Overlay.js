@@ -15,17 +15,15 @@ export function Overlay({ isOverlayOpen, setIsOverlayOpen }) {
           <RxCross1 size={30} color={'black'} />
         </StyledIconMobile>
         <h2>Chamber of Senses</h2>
-
         <p>
-          Engage your senses through interactive visuals and sensory
-          installations that showcase the seamless connection between STEM and
-          the arts. Join us on this unforgettable journey, where creativity and
-          innovation collide to inspire the next generation of thinkers and
-          creators.
+          Dive into an interactive installation that blends STEM and the arts
+          with virtual reality. This experience combines technology and play,
+          encouraging mindfulness and deeper engagement through sensory
+          exploration.
         </p>
-
         <p>
-          Hosted at the youth charity{' '}
+          We aim to inspire the next generation of thinkers and creators. Hosted
+          by the youth charity{' '}
           <a
             href="https://freeatlast.co.uk/
 "
@@ -33,12 +31,15 @@ export function Overlay({ isOverlayOpen, setIsOverlayOpen }) {
           >
             free@last
           </a>{' '}
-          in Nechells between 1<sup>st</sup> - 3<sup>rd</sup> Oct 2024, the
-          exhibition aims to inspire underprivileged youth to explore exciting
-          career opportunities in STEAM (Science, Technology, Engineering, Arts,
-          and Mathematics).
+          in Nechells, this project empowers Birmingham youth to explore
+          exciting career opportunities in STEAM (Science, Technology,
+          Engineering, Arts, and Mathematics).
         </p>
-
+        <p>
+          Join us at the Global Growth Congress during Birmingham Tech Week on
+          Wednesday, October 23rd, from 9am-4pm at Eastside Rooms, B7 4BL.
+        </p>
+        <br></br>
         <p> Created in collaboration with:</p>
         <p>
           <a href="https://www.westcic.com" target="_blank">
@@ -48,15 +49,18 @@ export function Overlay({ isOverlayOpen, setIsOverlayOpen }) {
           <a href="https://www.createcentraluk.com/" target="_blank">
             Create Central
           </a>
-          , independent artist and curator{' '}
-          <a href="https://www.instagram.com/maxqsantander/" target="_blank">
-            Dr. Azadeh Sarjoughian
-          </a>
-          , and sound artist{' '}
+          , independent artist and curator Dr. Azadeh Sarjoughian , and sound
+          artist{' '}
           <a href="https://www.instagram.com/maxqsantander/" target="_blank">
             Maximiliano Q. Santander
           </a>
           .
+        </p>
+        <p>
+          Funded by the{' '}
+          <a href="https://innovationwm.co.uk/wmip/" target="_blank">
+            West Midlands Innovation Programme
+          </a>
         </p>
       </StyledOverlay>
     </OverlayBackground>
