@@ -13,7 +13,7 @@ const SplineViewer = () => {
     // Dynamically load the Spline viewer script
     const script = document.createElement('script');
     script.src =
-      'https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js';
+      'https://unpkg.com/@splinetool/viewer@1.10.22/build/spline-viewer.js';
     script.type = 'module';
     document.body.appendChild(script);
 
@@ -73,5 +73,4 @@ const SplineViewer = () => {
     />
   );
 };
-
 export default SplineViewer;
